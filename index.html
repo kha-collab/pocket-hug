@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+ content="width=device-width, initial-scale=1">
+<title>A Little Hug 💜</title>
+<style>
+body {
+  background: #f6eef9;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #704b83;
+  padding: 35px 18px;
+}
+.card {
+  max-width: 400px;
+  margin: 35px auto;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 24px;
+  box-shadow: 0 5px 25px #d8c4df;
+}
+button {
+  background: #b78acb;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 17px;
+  margin: 8px;
+}
+#message {
+  margin-top: 25px;
+  line-height: 1.7;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>🐰💜</h1>
+  <h2>A Little Hug for You</h2>
+  <p>Sending you love from Taiwan.</p>
+  <p>How are you feeling?</p>
+
+  <button onclick="show('sad')">😢 Sad</button>
+  <button onclick="show('upset')">😤 Upset</button>
+  <button onclick="show('tired')">🥺 Tired</button>
+
+  <div id="message"></div>
+</div>
+<script>
+function show(mood) {
+  const messages = {
+    sad: "I wish I could hold your hand. ❤️",
+    upset: "Your feelings matter. I'm here to listen. 💜",
+    tired: "Rest well, my love. Sending a big hug. 🧸"
+  };
+  document.getElementById("message")
+    .textContent = messages[mood];
+}
+</script>
+</body>
+</html>
